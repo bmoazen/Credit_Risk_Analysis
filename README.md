@@ -20,7 +20,9 @@ Shown below is a table of the balanced accuracy scores for logistic regression m
 | SMOTEENN | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 |
 
 # Ensemble Learning
-| Ensemble Learner | Balanced Accuracy Score |
+| Ensemble Learner | Balanced Accuracy | Precision | Recall |
 | --- | --- |
-| Balanced Random Forest Classifier | 0.65 |
-| Undersampling - Cluster Centroids | 0.51 ||
+| Balanced Random Forest Classifier | 0.65 | HR 0.57 <br> LR 1.00 | HR 0.3 <br> LR 1.00 |
+
+# Summary
+In deciding which model to use, it is important to remember that there are almost 200 times more low-risk customers in the data set as there are high-risk.  While a high-risk customer may default on a loan, costing the company money, that money may be "made up" given a sufficient number of loans that are fully paid back. For this reason, it may be much more important to be able to accurately identify potential customers who would be low-risk, rather thsan making sure that potential high-risk customers are identified correctly. The recall statistic answers the question: what proportion of actual positives were identified correctly? From the above tables, we can see that the Balanced Random Forest Classifier has, by far, the highest recall statistic for the low-risk predictions. It accurately identifies all of the low-risk customers, thus giving the company a great chance of predicting if a potential customer would be low-risk.  
