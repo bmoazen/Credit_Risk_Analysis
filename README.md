@@ -12,12 +12,12 @@ The four sampling techniques utilized were:
 <br />
 Shown below is a table of the balanced accuracy, precision, and recall scores for logistic regression models using training data taken by each sampling technique where HR is "high-risk" and LR is "low-risk"
 
-| Sampling Technique | Balanced Accuracy | Precision | Recall |
-| --- | --- | --- | --- |
-| Oversampling | 0.62 | HR 0.01 <br> LR 1.00 | HR 0.59 <br> LR 0.65 |
-| SMOTE Oversampling | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 |
-| Undersampling | 0.51 | HR 0.01 <br> LR 0.99 | HR 0.59 <br> LR 0.42 |
-| SMOTEENN | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 |
+| Sampling Technique | Balanced Accuracy | Precision | Recall | Link to Classification Report |
+| --- | --- | --- | --- | --- |
+| Oversampling | 0.62 | HR 0.01 <br> LR 1.00 | HR 0.59 <br> LR 0.65 | [oversampling_cr](./Results/oversampling_cr.png) |
+| SMOTE Oversampling | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 | [smote_cr](./Results/smote_cr.png) |
+| Undersampling | 0.51 | HR 0.01 <br> LR 0.99 | HR 0.59 <br> LR 0.42 | [undersampling_cr](./Results/undersampling_cr.png) |
+| SMOTEENN | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 | [smoteen_cr](./Results/smoteenn_cr.png) |
 
 # Ensemble Learning
 Ensemble learning uses several models together to boost the overall predictive power of the final model. Beginning with an initial model, a second model is then developed incorporating the errors of the first model.
