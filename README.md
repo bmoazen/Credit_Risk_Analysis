@@ -9,15 +9,18 @@ The four sampling techniques utilized were:
  - Synthetic Minority Oversampling Technique (SMOTE)<br />SMOTE creates "synthetic data" which selects data points from the underrepresented class, then uses lines between them to create additional points for sampling
 - Undersampling (Cluster Centroids)<br /> creates "clusters" using averages of nearby points of the over-represented class, essentially reducing their influence in the model
 - Synthetic Minority Oversampling Technique with Edited Nearest Neighbor (SMOTEENN)<br/> combines over- and under-sampling using SMOTE and Edited Nearest Neighbors (ENN)
-<br/>
-| Sampling Technique | Balanced Accuracy Score |
-| --- | --- |
-| Oversampling | 0.62 |
-| SMOTE Oversampling | 0.63 |
-| Undersampling - Cluster Centroids | 0.51 |
-| SMOTEENN | 0.63 |
+<br />
+Shown below is a table of the balanced accuracy scores for logistic regression models using training data taken by each sampling technique where HR is "high-risk" and LR is "low-risk"
+
+| Sampling Technique | Balanced Accuracy | Precision | Recall |
+| --- | --- | --- | --- |
+| Oversampling | 0.62 | HR 0.01 <br> LR 1.00 | HR 0.59 <br> LR 0.65 |
+| SMOTE Oversampling | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 |
+| Undersampling | 0.51 | HR 0.01 <br> LR 0.99 | HR 0.59 <br> LR 0.42 |
+| SMOTEENN | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 |
 
 # Ensemble Learning
 | Ensemble Learner | Balanced Accuracy Score |
 | --- | --- |
 | Balanced Random Forest Classifier | 0.65 |
+| Undersampling - Cluster Centroids | 0.51 ||
