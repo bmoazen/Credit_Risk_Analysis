@@ -10,7 +10,7 @@ The four sampling techniques utilized were:
 - Undersampling (Cluster Centroids)<br /> creates "clusters" using averages of nearby points of the over-represented class, essentially reducing their influence in the model
 - Synthetic Minority Oversampling Technique with Edited Nearest Neighbor (SMOTEENN)<br/> combines over- and under-sampling using SMOTE and Edited Nearest Neighbors (ENN)
 <br />
-Shown below is a table of the balanced accuracy scores for logistic regression models using training data taken by each sampling technique where HR is "high-risk" and LR is "low-risk"
+Shown below is a table of the balanced accuracy, precision, and recall scores for logistic regression models using training data taken by each sampling technique where HR is "high-risk" and LR is "low-risk"
 
 | Sampling Technique | Balanced Accuracy | Precision | Recall |
 | --- | --- | --- | --- |
@@ -21,7 +21,7 @@ Shown below is a table of the balanced accuracy scores for logistic regression m
 
 # Ensemble Learning
 | Ensemble Learner | Balanced Accuracy | Precision | Recall |
-| --- | --- |
+| --- | --- | --- | --- |
 | Balanced Random Forest Classifier | 0.65 | HR 0.57 <br> LR 1.00 | HR 0.3 <br> LR 1.00 |
 
 # Summary
