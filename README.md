@@ -20,10 +20,17 @@ Shown below is a table of the balanced accuracy, precision, and recall scores fo
 | SMOTEENN | 0.63 | HR 0.01 <br> LR 1.00 | HR 0.62 <br> LR 0.65 | [smoteen_cr](./Results/smoteenn_cr.PNG) |
 
 # Ensemble Learning
-Ensemble learning uses several models together to boost the overall predictive power of the final model. Beginning with an initial model, a second model is then developed incorporating the errors of the first model.
-| Ensemble Learner | Balanced Accuracy | Precision | Recall |
-| --- | --- | --- | --- |
-| Balanced Random Forest Classifier | 0.65 | HR 0.57 <br> LR 1.00 | HR 0.3 <br> LR 1.00 |
+Ensemble learning uses several models together to boost the overall predictive power of the final model. Beginning with an initial model, a second model is then developed incorporating the errors of the first model.<br />
+SHown in the table below are the results for using the Balanced Random Forest Classifier (BRFC) ensemble learning technique.
+
+| Ensemble Learner | Balanced Accuracy | Precision | Recall | Link to Classification Report |
+| --- | --- | --- | --- |--- |
+| Balanced Random Forest Classifier | 0.65 | HR 0.57 <br> LR 1.00 | HR 0.3 <br> LR 1.00 | [brfc_cr](./Results/brfc_cr.PNG) |
+
+The 10 most important variables (features) for each customer, according to the BRFC method, are shown in the figure below:
+![](./Results/brfc_featureImportance.PNG)
+
+Obviously the last payment amount would be the greatest predictor of a high-risk customer, as anyone who defaults on a low, by definition, would have a final payment amount of zero. Not surprisingly, the debt-to-income ratio (dti) is also present in the top 10. Out of the top 10 most important features, this is the only one that can be calculated before a customer receives a loan, all of the others depend on how well the customer is repaying their loan. 
 
 # Summary
 In deciding which model to use, it is important to remember that there are almost 200 times more low-risk customers in the data set as there are high-risk.  While a high-risk customer may default on a loan, costing the company money, that money may be "made up" given a sufficient number of loans that are fully paid back. For this reason, it may be much more important to be able to accurately identify potential customers who would be low-risk, rather than making sure that potential high-risk customers are identified correctly. The recall statistic answers the question: what proportion of actual positives were identified correctly? From the above tables, we can see that the Balanced Random Forest Classifier has, by far, the highest recall statistic for the low-risk predictions. It accurately identifies all of the low-risk customers, thus giving the company a great chance of predicting if a potential customer would be low-risk. Futhermore, the other models have recall scores at 65% percent or lower - meaning 35 percent or more of actual low-risk customers will be misidentified as high-risk. That has the potential of mistankingly turning thousands of customers away. 
