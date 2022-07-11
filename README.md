@@ -21,7 +21,7 @@ Shown below is a table of the balanced accuracy, precision, and recall scores fo
 
 # Ensemble Learning
 Ensemble learning uses several models together to boost the overall predictive power of the final model. Beginning with an initial model, a second model is then developed incorporating the errors of the first model.<br />
-SHown in the table below are the results for using the Balanced Random Forest Classifier (BRFC) ensemble learning technique.
+Shown in the table below are the results for using the Balanced Random Forest Classifier (BRFC) ensemble learning technique.
 
 | Ensemble Learner | Balanced Accuracy | Precision | Recall | Link to Classification Report |
 | --- | --- | --- | --- |--- |
